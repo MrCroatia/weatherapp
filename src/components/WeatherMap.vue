@@ -21,7 +21,7 @@ const initMap = () => {
   import('leaflet').then((L) => {
     // Create map if not exists
     if (!map) {
-      // Default coordinates
+      // Default coordinates for New York
       const defaultLat = 40.7128;
       const defaultLng = -74.0060;
       
