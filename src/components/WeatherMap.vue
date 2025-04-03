@@ -25,8 +25,11 @@ const initMap = () => {
       const defaultLat = 40.7128;
       const defaultLng = -74.0060;
       
+      // Use non-null assertion since we've checked it's not null above
+      const mapElement = mapContainer.value!;
+      
       // Create map instance
-      map = L.map(mapContainer.value).setView([defaultLat, defaultLng], 10);
+      map = L.map(mapElement).setView([defaultLat, defaultLng], 10);
       
       // Add tile layer
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

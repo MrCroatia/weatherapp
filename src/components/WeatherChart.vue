@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { Line } from 'vue-chartjs';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import { useWeatherStore } from '../stores/weatherStore';
@@ -39,7 +39,7 @@ const chartOptions = {
       display: false
     },
     tooltip: {
-      mode: 'index',
+      mode: 'index' as const,
       intersect: false,
       backgroundColor: 'rgba(17, 24, 39, 0.9)',
       titleColor: '#fff',

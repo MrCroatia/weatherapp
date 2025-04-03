@@ -2,7 +2,6 @@
 import { computed } from 'vue';
 import { useWeatherStore } from '../stores/weatherStore';
 import { formatDate, getWeatherIconUrl } from '../services/weatherApi';
-import type { HourlyForecast } from '../services/weatherApi';
 
 const weatherStore = useWeatherStore();
 const { state } = weatherStore;

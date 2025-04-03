@@ -8,7 +8,8 @@ import { ref, watch } from 'vue';
  * @returns A reactive debounced value
  */
 export function useDebounce<T>(value: T, delay = 500) {
-  const debouncedValue = ref(value) as typeof value;
+  // Use a more specific type that guarantees the value property exists
+  const debouncedValue = ref<T>(value);
   let timeout: number | undefined;
   
   watch(() => value, (newValue) => {
